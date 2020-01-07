@@ -39,3 +39,53 @@ idioms = {
 
 for (key, value) in idioms.items():
     print(key + ':' + " ".join(value) )
+
+
+
+my_family = {
+    "sister": {
+        "name": "Casie",
+        "age": 34
+    },
+    "brother": {
+        "name": "Tyler",
+        "age": 27
+    },
+    "mother": {
+        "name": "Carol",
+        "age": 56
+    },
+    "father": {
+        "name": "Dave",
+        "age": 60
+    },
+}
+
+for (key, value) in my_family.items():
+    print(f'{value["name"]} is my {key} and is {value["age"]} years old')
+
+if "brother" in my_family:
+    print("he is here")
+
+stockDict = {
+    "GM": "General Motors",
+    "CAT":"Caterpillar",
+    "EK":"Eastman Kodak",
+    "GE":"General Electric"
+}
+
+purchases = [
+    ( 'GE', 100, '10-sep-2001', 48 ),
+    ( 'CAT', 100, '1-apr-1999', 24 ),
+    ( 'GE', 200, '1-jul-1998', 56 )
+]
+
+
+[x[1] for x in purchases]
+
+for key,value in stockDict.items():
+    # print(key, value)
+    for purchase in purchases:
+        if purchase[0] == key:
+            print(f'I purchased {purchase[1]} shares of {value} stock for a total of ${purchase[1] * purchase[3]}')
+
